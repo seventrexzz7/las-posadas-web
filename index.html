@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Castillo de Cardona - Hotel cinco estrellas</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    </head>
+    <body>
+        <!--------------Navbar---------------------->
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="./src/assets/logo-dark.png" alt="logo"/>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#about">Sobre nosotros</a></li>
+                    <li><a href="#features">Servicios</a></li>
+                    <li><a href="#contact" class="btn">Reservar</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </header>
+        <!---------------------------------------->
+
+        <!--------------Hero---------------------->
+        <section id="hero">
+            <!--bkg-->
+            <video autoplay muted loop id="bg-video">
+                <source src="./src/assets/background.mp4" type="video/mp4">
+            </video>
+            <!--black overlay-->
+            <div class="overlay"></div>
+            <!--content-->
+            <div class="h-cont">
+                <div class="h-cont1">
+                    <h3>Vive tu experiencia</h3>
+                    <h1>Castillo de Cardona</h1>
+                    <h3>En el corazón de la Edad Media</h3>
+                    <button class="btn">Consultar disponibilidad</button>
+                </div>
+            </div>
+
+            <a href="#about" class="scroll-btn">
+                <span>↓</span>
+            </a>
+        </section>
+        <!---------------------------------------->
+
+        <!--------------About---------------------->
+        <section id="about">
+            <div class="a-cont">
+                <div class="a-img">
+                    <img src="./src/assets/photo-2.jpg" alt="about image"/>
+                </div>
+                <div class="a-text">
+                    <h2>Sobre el castillo</h2>
+                    <div class="line"></div>
+                    <p>Sobre un promontorio, en una fortaleza del siglo IX, se alza el Castillo de Cardona, uno de los complejos medievales más impresionantes de Cataluña. Su ubicación privilegiada ofrece una excepcional panorámica de Cardona, el Pirineo y la Cataluña interior.</p>
+                        <p>En su interior, fosos, torres y murallas góticas se unen a una decoración basada en el confort y un mobiliario de inspiración medieval catalana. El restaurante, ubicado en el antiguo refectorio, es uno de los más impresionantes de Paradores. Maravíllate en su galería de arcos apuntados mientras disfrutas de la mejor gastronomía.</p>
+                    <button class="btn-n">Reservar</button>
+                </div>
+            </div>
+
+        </section>
+        <!------------------MAP--------------->
+        <section id="map">
+            <div class="u-cont">
+                <div class="u-cont1">
+                    <h2>Ubicación</h2>
+                    <h3>Castillo de Cardona</h3>
+                    <p>Castell de Cardona, s/n 08261 Cardona (Barcelona)</p>
+                    <p>Número de registro: HCC-012232329902/47</p>
+                    <button class="btn">Ver más</button>
+                </div>
+                <div class="u-cont2">
+                    <div class="map-cont">
+                        <div id="leaflet-map" style="height: 450px; width: 100%; border-radius: 20px;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!---------------------------------------->
+        <section id="gallery">
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="./src/assets/c4.jpg" alt="Imagen 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="./src/assets/c3.jpg" alt="Imagen 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="./src/assets/c2.jpg" alt="Imagen 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="./src/assets/c1.jpg" alt="Imagen 4">
+                </div>
+            </div>
+        </section>
+        <script src="script.js"></script>
+    </body>
+</html>
