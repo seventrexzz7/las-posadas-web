@@ -34,12 +34,14 @@ html {
   z-index: 100;
 }
 
+/* Logo */
 .logo img {
   height: 50px;
   width: auto;
   object-fit: contain;
 }
 
+/* Links de navegación */
 .nav-links {
   list-style: none;
   display: flex;
@@ -55,23 +57,72 @@ html {
 
 .nav-links a:hover {
   color: antiquewhite;
-  transition: color 0.3s;
 }
 
-
-
 .hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    z-index: 200;
 }
 
 .hamburger span {
-  width: 25px;
-  height: 3px;
-  background: white;
-  border-radius: 2px;
+    width: 30px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/*HAMBURGUESA*/
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed; /* menú desplegable */
+    top: 90px;
+    right: 0;
+    width: 100%;       /* ocupar toda la pantalla */
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    display: none;
+
+    background: rgba(0,0,0,0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+    z-index: 150;
+  }
+
+    .nav-links li {
+        width: 100%; /* cada link ocupa todo el ancho */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }
 
 /*********HERO**********/
@@ -712,31 +763,6 @@ html {
   color: #555;
 }
 /*************RESPONSIVE**************/
-
-/************NAVBAR************/
-
-@media (max-width: 768px) {
-  .nav-links {
-    position: fixed;
-    top: 60px;
-    right: -100%;
-    flex-direction: column;
-    background: rgba(0,0,0,0.9);
-    width: 200px;
-    padding: 20px;
-    gap: 20px;
-    transition: right 0.3s;
-    height: calc(100% - 60px);
-  }
-
-  .nav-links.active {
-    right: 0;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-}
 
 /*************HERO**************/
 

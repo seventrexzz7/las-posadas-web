@@ -16,6 +16,14 @@ let checkOutDate = null;
 const clearBtn = document.getElementById("clear-selection");
 const reserveBtn = document.getElementById("reserve-dates");
 
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active'); // alterna la clase
+  hamburger.classList.toggle('open'); // opcional, para animar las barras
+});
+
 const reservedDates = [
     "2025-10-05",
     "2025-10-12",
