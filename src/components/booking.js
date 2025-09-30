@@ -16,7 +16,6 @@ let checkOutDate = null;
 const clearBtn = document.getElementById("clear-selection");
 const reserveBtn = document.getElementById("reserve-dates");
 
-// Fechas reservadas de ejemplo
 const reservedDates = [
     "2025-10-05",
     "2025-10-12",
@@ -32,21 +31,18 @@ clearBtn.addEventListener("click", () => {
 
 reserveBtn.addEventListener("click", () => {
     if(checkInDate && checkOutDate){
-        // Convertir fechas a string para guardar o enviar
+        
         const checkInStr = formatDate(checkInDate);
         const checkOutStr = formatDate(checkOutDate);
         
         alert(`Reservado desde ${checkInStr} hasta ${checkOutStr}`);
 
-        // Aquí podrías enviar los datos a tu servidor o base de datos
-        // Ejemplo: agregar al array de fechas reservadas
         let tempDate = new Date(checkInDate);
         while(tempDate <= checkOutDate){
             reservedDates.push(tempDate.toISOString().split('T')[0]);
             tempDate.setDate(tempDate.getDate() + 1);
         }
 
-        // Limpiar selección después de reservar
         checkInDate = null;
         checkOutDate = null;
         updateDisplay();
@@ -111,7 +107,7 @@ function handleDateClick(dateStr) {
     } else if(clickedDate > checkInDate){
         checkOutDate = clickedDate;
     } else {
-        // Si el usuario hace click en una fecha anterior a check-in, reinicia check-in
+
         checkInDate = clickedDate;
         checkOutDate = null;
     }
@@ -132,7 +128,6 @@ function formatDate(date) {
     return `${String(d).padStart(2,"0")}/${String(m).padStart(2,"0")}/${y}`;
 }
 
-// Navegación
 prevBtn.addEventListener("click", () => {
     currentMonth--;
     if(currentMonth < 0){
@@ -151,5 +146,5 @@ nextBtn.addEventListener("click", () => {
     renderCalendar(currentMonth, currentYear);
 });
 
-// Inicializar
+
 renderCalendar(currentMonth, currentYear);

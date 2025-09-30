@@ -1,11 +1,18 @@
-/* style.css */
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+*{
+    box-sizing: border-box;
+}
 body {
     font-family: "Playfair Display", serif;
     font-weight: 300;
-    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 section {
@@ -28,7 +35,8 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
+    padding: 5px 20px;
+    gap: 0px;
     
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
@@ -41,54 +49,64 @@ section {
 }
 
 .logo img {
-  height: 50px;
-  width: auto;
-  object-fit: contain;
+    height: 50px;
+    width: auto;
+    object-fit: contain;
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
+    margin-left: auto;
+    list-style: none;
+    display: flex;
+    gap: 40px;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: 0.3s ease;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: antiquewhite;
-  transition: color 0.3s;
-}
-
-.nav-links a.btn {
-  padding: 8px 20px;
-  color: antiquewhite;
-  border-radius: 50px;
-  font-weight: bold;
-  transition: 0.3s ease;
-}
-
-.nav-links a.btn:hover {
-  transform: scale(1.05);
+    color: antiquewhite;
+    transition: color 0.3s;
 }
 
 .hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
 }
 
 .hamburger span {
-  width: 25px;
-  height: 3px;
-  background: white;
-  border-radius: 2px;
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
 }
+
+.btn {
+    color: antiquewhite;
+    margin-top: 40px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    cursor: pointer;
+    transform: 0.3 ease;
+}
+
+.btn:hover {
+    background: #818181;
+    transform: scale(1.03);
+}
+
+/************CALENDAR************/
 
 .calendar-container {
     border-radius: 20px;
@@ -156,7 +174,6 @@ section {
     cursor: not-allowed;
 }
 
-/* style.css (complemento) */
 .days .in-range {
     background-color: #8b8282;
     color: #fff;
@@ -166,17 +183,17 @@ section {
 }
 
 .days .check-in {
-    background-color: #7a6e6e; /* verde oscuro */
+    background-color: #a59c9c;
     color: #fff;
 }
 
 .days .check-out {
-    background-color: #7a6e6e; /* azul */
+    background-color: #a59c9c;
     color: #fff;
 }
 
 .days .in-range {
-    background-color: #ccc6c6; /* azul claro */
+    background-color: #ccc6c6;
     color: #fff;
 }
 
@@ -223,3 +240,73 @@ section {
     transform: scale(1.03);
 }
 
+/**********responsive***************/
+
+@media (max-width: 1024px) {
+  .calendar-container {
+    max-width: 320px;
+    padding: 15px;
+  }
+
+  .calendar-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .days div {
+    padding: 8px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .calendar-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .calendar-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .calendar-header h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .calendar-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .calendar-buttons button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-container {
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  .calendar-header h2 {
+    font-size: 1rem;
+  }
+
+  .weekdays div {
+    font-size: 0.8rem;
+  }
+
+  .days div {
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+
+  .calendar-buttons button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
