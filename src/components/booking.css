@@ -296,70 +296,73 @@ section {
 /**********responsive***************/
 
 @media (max-width: 1024px) {
-  .calendar-container {
-    max-width: 320px;
-    padding: 15px;
-  }
+    .calendar-container {
+        max-width: 320px;
+        padding: 15px;
+    }
 
-  .calendar-header h2 {
-    font-size: 1.4rem;
-  }
+    .calendar-header h2 {
+        font-size: 1.4rem;
+    }
 
-  .days div {
-    padding: 8px;
-    font-size: 0.95rem;
-  }
+    .days div {
+        padding: 8px;
+        font-size: 0.95rem;
+    }
 }
 
 @media (max-width: 768px) {
-  .calendar-container {
-    max-width: 90%;
-    padding: 15px;
-  }
+    section {
+        background-image: url(../assets/photo-1-small.jpg);
+    }
+    .calendar-container {
+        max-width: 90%;
+        padding: 15px;
+    }
 
-  .calendar-header {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+    .calendar-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
-  .calendar-header h2 {
-    font-size: 1.2rem;
-    text-align: center;
-  }
+    .calendar-header h2 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
 
-  .calendar-buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
+    .calendar-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
 
-  .calendar-buttons button {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-  }
+    .calendar-buttons button {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
-  .calendar-container {
-    padding: 10px;
-    border-radius: 15px;
-  }
+    .calendar-container {
+        padding: 10px;
+        border-radius: 15px;
+    }
 
-  .calendar-header h2 {
-    font-size: 1rem;
-  }
+    .calendar-header h2 {
+        font-size: 1rem;
+    }
 
-  .weekdays div {
-    font-size: 0.8rem;
-  }
+    .weekdays div {
+        font-size: 0.8rem;
+    }
 
-  .days div {
-    padding: 6px;
-    font-size: 0.8rem;
-  }
+    .days div {
+        padding: 6px;
+        font-size: 0.8rem;
+    }
 
-  .calendar-buttons button {
-    font-size: 0.9rem;
-    padding: 8px;
-  }
+    .calendar-buttons button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
 }
