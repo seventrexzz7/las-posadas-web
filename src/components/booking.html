@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calendario de Reservas - Castillo de </title>
+        <link rel="stylesheet" href="booking.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="../assets/logo-dark.png" alt="logo"/>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/index.html">Sobre nosotros</a></li>
+                    <li><a href="/index.html">Servicios</a></li>
+                    <li><a href="/index.html" class="btn">Reservar</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </header>
+        <section>
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button id="prev-month">&lt;</button>
+                    <h2 id="month-year"></h2>
+                    <button id="next-month">&gt;</button>
+                </div>
+
+                <div class="selected-dates">
+                    <p>Check-in: <span id="check-in">--/--/----</span></p>
+                    <p>Check-out: <span id="check-out">--/--/----</span></p>
+                </div>
+
+                <div class="calendar-body">
+                    <div class="weekdays">
+                        <div>Lun</div><div>Mar</div><div>Mié</div><div>Jue</div><div>Vie</div><div>Sáb</div><div>Dom</div>
+                    </div>
+                    <div class="days" id="days"></div>
+                </div>
+            </div>
+            <div class="calendar-buttons">
+                <button id="clear-selection">Limpiar selección</button>
+                <button id="reserve-dates">Reservar fechas</button>
+            </div>
+        </section>
+
+        <script src="booking.js"></script>
+    </body>
+</html>

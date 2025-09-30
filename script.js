@@ -8,3 +8,4 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 L.marker([41.804, 1.823]).addTo(map)
   .bindPopup('Castillo de Cardona')
   .openPopup();
+
