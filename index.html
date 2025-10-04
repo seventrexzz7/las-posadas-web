@@ -2,171 +2,66 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Castillo de Sant Angelo - Hotel cinco estrellas</title>
+        <meta name="description" content="Hotel Castle of Sant Angelo">
+        <meta name="author" content="Morg.Dev">
+
+        <title>Hotel Castle of Angelo Marco - Five Star Hotel</title>
+
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
     <body>
-        <!--------------Navbar---------------------->
         <header>
-            <nav class="navbar">
-                <div class="logo">
-                    <img src="./src/assets/logo-dark.png" alt="logo"/>
+            <nav class="navbar roboto">
+                <div class="n-cont">
+                    <img src="components/assets/logo-white.png" alt="">
+                    <ul class="n-link">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#rooms">Rooms</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="#hero">Inicio</a></li>
-                    <li><a href="#about">Sobre nosotros</a></li>
-                    <li><a href="#features">Servicios</a></li>
-                    <li><a href="src/components/booking.html" class="btn">Reservar</a></li>
-                </ul>
             </nav>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </header>
-        <!---------------------------------------->
-
-        <!--------------Hero---------------------->
         <section id="hero">
-            <!--bkg-->
-            <video autoplay muted loop id="bg-video">
-                <source src="./src/assets/background.mp4" type="video/mp4">
-            </video>
-            <!--black overlay-->
-            <div class="overlay"></div>
-            <!--content-->
             <div class="h-cont">
-                <div class="h-cont1">
-                    <h3>Vive tu experiencia</h3>
-                    <h1>Castillo de Sant Angelo</h1>
-                    <h3>En el corazón de la Edad Media</h3>
-                    <button class="btn book-btn">Consultar disponibilidad</button>
-                </div>
-            </div>
-
-            <a href="#about" class="scroll-btn">
-                <span>↓</span>
-            </a>
-        </section>
-        <!---------------------------------------->
-
-        <!--------------About---------------------->
-        <section id="about">
-            <div class="a-cont">
-                <div class="a-img">
-                    <img src="./src/assets/photo-2.jpg" alt="about image"/>
-                </div>
-                <div class="a-text">
-                    <h2>Sobre el castillo</h2>
-                    <div class="line"></div>
-                    <p>Sobre un promontorio, en una fortaleza del siglo IX, se alza el Castillo de Sant Angelo, uno de los complejos medievales más impresionantes de Cataluña. Su ubicación privilegiada ofrece una excepcional panorámica de Cardona, el Pirineo y la Cataluña interior.</p>
-                        <p>En su interior, fosos, torres y murallas góticas se unen a una decoración basada en el confort y un mobiliario de inspiración medieval catalana. El restaurante, ubicado en el antiguo refectorio, es uno de los más impresionantes de Paradores. Maravíllate en su galería de arcos apuntados mientras disfrutas de la mejor gastronomía.</p>
-                    <button class="btn book-btn">Reservar</button>
-                </div>
-            </div>
-        </section>
-        <!---------------------------------------->
-
-        <!--------------MAP---------------------->
-        <section id="map">
-            <div class="u-cont">
-                <div class="u-cont1">
-                    <h2>Ubicación</h2>
-                    <h3>Castillo de Sant Angelo</h3>
-                    <p>Castell de Sant Angelo, s/n 08261 Sant Angelo (Barcelona)</p>
-                    <p>Número de registro: HCC-012232329902/47</p>
-                    <button class="btn book-btn">Ver más</button>
-                </div>
-                <div class="u-cont2">
-                    <div class="map-cont">
-                        <div id="leaflet-map" style="height: 450px; width: 100%; border-radius: 20px;"></div>
+                <div class="h-deco">
+                    <h1 class="roboto">Hotel Angelo Marco</h1>
+                    <h3>"Live the experience at the heart of medieval times."</h3>
+                    <div class="line-cont">
+                        <div class="line"></div>
+                        <img src="components/assets/lottus-icon.png" alt="">
+                        <div class="line"></div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!---------------------------------------->
-
-        <!--------------CONTACT---------------------->
-        <section id="contact">
-            <div class="contact-container">
-                <h2>¿Tienes alguna duda?</h2>
-                <form class="contact-form">
-                    <div class="f-g">
-                        <label for="name"><i class="fas fa-user"></i>Nombre:</label>
-                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                <form id="book-form">
+                    <div class="d-slot">
+                        <label for="in-date">Check-in date:</label>
+                        <input type="date" id="in-date" name="date">
                     </div>
-
-                    <div class="f-g">
-                        <label for="email"><i class="fas fa-envelope"></i>Correo:</label>
-                        <input type="email" id="email" name="email" placeholder="Tu correo" required>
+                    <div class="d-slot">
+                        <label for="out-date">Check-out date:</label>
+                        <input type="date" id="out-date" name="date">
                     </div>
-
-                    <div class="f-g">
-                        <label for="message"><i class="fas fa-comment"></i>Mensaje:</label>
-                        <textarea id="message" name="message" placeholder="Escribe tu mensaje" required></textarea>
+                    <div class="d-slot">
+                        <label for="rooms">Rooms:</label>
+                        <input type="number" id="rooms" name="rooms">
                     </div>
-
-                    <button type="submit" class="btn-submit">Enviar</button>
+                    <div class="d-slot">
+                        <label for="adults">Adults:</label>
+                        <input type="number" id="adults" name="adults">
+                    </div>
+                    <div class="d-slot">
+                        <label for="children">Adults:</label>
+                        <input type="number" id="children" name="children">
+                    </div>
+                    <button type="submit">Search</button>
                 </form>
-            </div>
-            <div class="extra-links">
-                <div class="extra-item">
-                    <i class="fas fa-question-circle"></i>
-                    <p>FAQ (preguntas más frecuentes)</p>
-                    <a href="#faq">Ir ahora &gt;&gt;</a>
-                </div>
-
-                <div class="extra-item">
-                    <i class="fas fa-briefcase"></i>
-                    <p>¿Quieres trabajar con nosotros?</p>
-                    <a href="#trabajo">Más información &gt;&gt;</a>
-                </div>
-
-                <div class="extra-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <p>¿Quieres hablar por teléfono con nosotros?</p>
-                    <a href="#telefono">Más información &gt;&gt;</a>
-                </div>
             </div>
         </section>
         <script src="script.js"></script>
     </body>
-
-    <!---------------------------------------->
-
-    <!--------------FOOTER---------------------->
-    <footer id="footer">
-        <div class="footer-container">
-            <div class="footer-about">
-                <h3>Sobre Nosotros</h3>
-                <p>Somos un proyecto dedicado a ofrecer la mejor experiencia, combinando cultura, comodidad y estilo en cada detalle.</p>
-            </div>
-            <div class="footer-links">
-                <h3>Enlaces</h3>
-                <ul>
-                    <li><a href="#hero">Inicio</a></li>
-                    <li><a href="#about">Sobre el castillo</a></li>
-                    <li><a href="#services">Servicios</a></li>
-                    <li><a href="./src/components/booking.html">Reserva</a></li>
-                    <li><a href="#contact">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <h3>Síguenos</h3>
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Castillo de Sant Angelo. Todos los derechos reservados.</p>
-        </div>
-    </footer>
 </html>

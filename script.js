@@ -1,24 +1,17 @@
-const map = L.map('leaflet-map').setView([41.804, 1.823], 15);
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('book-form');
 
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active'); // alterna la clase
-  hamburger.classList.toggle('open'); // opcional, para animar las barras
+        const inDate = document.getElementById('in-date').value;
+        const outDate = document.getElementById('out-date').value;
+        const rooms = parseInt(document.getElementById('rooms').value);
+        const adults = parseInt(document.getElementById('adults').value);
+        const children = parseInt(document.getElementById('children').value);
+
+        const url = `components/booking/booking.html?inDate=${inDate}&outDate=${outDate}&rooms=${rooms}&adults=${adults}&children=${children}`;
+        console.log(url);
+        window.location.href = url;
+    })
 });
-
-document.querySelectorAll(".book-btn").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    window.location.href = "src/components/booking.html";
-  });
-});
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
-
-L.marker([41.804, 1.823]).addTo(map)
-  .bindPopup('Castillo de Sant Angelo')
-  .openPopup();
-
