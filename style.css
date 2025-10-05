@@ -15,6 +15,7 @@ html{
 }
 
 .navbar{
+    font-family: "Inter", sans-serif;
     background: rga(0,0,0,0.15);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); 
@@ -23,9 +24,28 @@ html{
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 10px 200px;
+    padding: 5px 200px;
     z-index: 0;
 }
+
+.li-b{
+    height: 50px;
+    width: 140px;
+    background-color: #773512;
+    border-radius: 5px;
+    border: 2px solid #fff;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .navbar::after{
     content: "";
     position: absolute;
@@ -43,20 +63,32 @@ html{
 .n-cont img{
     height: 70px;
 }
+.n-link .li-c{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.n-link .li-c:hover{
+    background: rgba(0 ,0 ,0 , 0.2);
+    border-radius: 10px;
+
+    height: 50px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d6d6d6;
+}
 
 .n-link{
     list-style: none;
     display: flex;
-    gap: 50px;
+    gap: 40px;
 }
 
 .n-link a{
     text-decoration: none;
     color: #fff;
-}
-
-.n-link a:hover{
-    color: #d6d6d6;
 }
 
 #hero{
@@ -89,6 +121,7 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 40px;
     gap: 10px;
 }
 
@@ -177,6 +210,48 @@ html{
     color: #fff;
 }
 
+#logos{
+    background-color: #fff;
+    font-family: "Inter", sans-serif;
+    margin-top: 100px;
+}
+
+.l-cont{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    gap: 300px;
+
+    margin-bottom: 100px;
+}
+
+.logo-s img{
+    height: 100px;
+}
+.logo-s h3{
+    margin-top: 10px;
+    font-size: 30px;
+}
+.logo-s h2{
+    margin-top: 10px;
+    font-size: 40px;
+}
+.logo-b img{
+    height: 150px;
+}
+.logo-b h3{
+    margin-top: 10px;
+    font-size: 30px;
+}
+.logo-b h2{
+    margin-top: 10px;
+    font-size: 40px;
+}
+
 #booking{
     color: #fff;
     background-image: url(components/assets/pexels-chris-f-38966-21629423.jpg);
@@ -191,12 +266,9 @@ html{
     text-align: center;
 }
 
-
-
 .sub-book{
     color: #191919;
 }
-
 
 @media (max-width: 786px){
     
