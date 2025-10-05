@@ -93,7 +93,7 @@ html{
 
 #hero{
     color: #fff;
-    background-image: url(components/assets/pexels-pixabay-161758.jpg);
+    background-image: url(components/assets/hotel/hero/hero-bkg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -213,7 +213,7 @@ html{
 #logos{
     background-color: #fff;
     font-family: "Inter", sans-serif;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .l-cont{
@@ -226,7 +226,7 @@ html{
 
     gap: 300px;
 
-    margin-bottom: 100px;
+    margin-bottom: 3px;
 }
 
 .logo-s img{
@@ -250,6 +250,69 @@ html{
 .logo-b h2{
     margin-top: 10px;
     font-size: 40px;
+}
+#roomsC{
+    background-color: #fff;
+    font-family: "Inter", sans-serif;
+    
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+
+    padding-top: 150px;
+    padding-bottom: 200px;
+}
+
+#roomsC h2{
+    color: #191919;
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+}
+#roomsC p{
+    color: #191919;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.r-cont{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+.r-slot{
+    display: flex;
+}
+
+.r-slot img{
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: 70% 0%;
+    height: 400px;
+    width: 400px;
+}
+
+.r-slot a{
+    color: #474747;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.decoF{
+    z-index: 2;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #booking{
