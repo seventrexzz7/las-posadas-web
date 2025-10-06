@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('book-form');
 
+    const navbar = document.querySelector('.navbar');
+    const tSection = document.querySelector('#logos');
+
     form.addEventListener('submit', function(e){
         e.preventDefault();
 
@@ -13,5 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const url = `components/booking/booking.html?inDate=${inDate}&outDate=${outDate}&rooms=${rooms}&adults=${adults}&children=${children}`;
         console.log(url);
         window.location.href = url;
+    })
+
+    window.addEventListener('scroll', () => {
+        const sTop = tSection.offsetTop;
+        const sHeight = tSection.offsetHeight;
+        const scrollPos = window.scrollY + navbar.offsetHeight;
+
+        if(scrollPos >= sTop && sHeight < sTop + sHeight){
+            navbar.classList.add('scrolled');
+        }else{
+            navbar.classList.remove('scrolled');
+        }
     })
 });
