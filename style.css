@@ -17,7 +17,7 @@ html{
 .navbar{
     font-family: "Inter", sans-serif;
     background: rga(0,0,0,0.15);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(10px); 
     
 
@@ -29,6 +29,7 @@ html{
 }
 
 .li-b{
+    position: relative;
     height: 50px;
     width: 140px;
     background-color: #773512;
@@ -58,26 +59,59 @@ html{
     justify-content: space-between;
     align-items: center;
     padding: 14px 40px;
-    z-index: 10;
+    z-index: 100;
 }
 .n-cont img{
     height: 70px;
 }
-.n-link .li-c{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.n-link .li-c:hover{
-    background: rgba(0 ,0 ,0 , 0.2);
-    border-radius: 10px;
 
-    height: 50px;
-    width: 70px;
+.n-link .li-c a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+
+  text-decoration: none;
+  color: #fff;
+
+  position: relative;
+
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+
+  transition: color 0.2s ease;
+  z-index: 101;
+}
+
+.n-link .li-c a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: none;
+
+  transform: scale(0.95);
+  transform-origin: center;
+  transition: transform 0.22s ease, opacity 0.22s ease;
+
+  opacity: 0;
+  z-index: -1;
+}
+
+.n-link .li-c a:hover::before {
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+.n-link .li-c{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #d6d6d6;
 }
 
 .n-link{
@@ -297,7 +331,7 @@ html{
     height: 400px;
     width: 400px;
 
-    box-shadow: -30px 30px 0 0 #dddddd;
+    box-shadow: -50px 100px 0 0 #f5f5f5;
     margin: 20px;
 }
 
@@ -305,7 +339,7 @@ html{
     color: #474747;
     font-family: "Inter", sans-serif;
     text-decoration: none;
-    margin-top: 30px;
+    margin-top: 10px;
     font-size: 25px;
     font-weight: 700;
 }
@@ -316,6 +350,88 @@ html{
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+#amenities{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 100px;
+}
+
+.a-intro{
+    font-family: "Inter", sans-serif;
+    position: relative;
+    z-index: 100;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.a-intro h2{
+    color: #191919;
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.a-intro p{
+    margin: 0;
+
+    color: #191919;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.a-cont{
+    z-index: 1;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    transform: translateX(-70px);
+}
+.a-slots{
+    z-index: 1;
+}
+
+.sqr{
+    position: absolute;
+    transform: translate(340px, -150px);
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    top: 100px;
+    width: 60%;
+    height: 120%;
+    z-index: 0;
+}
+
+.a-img{
+    height: 500px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.amenS{
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #773512;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.a-icon{
+    height: 40px;
 }
 
 #booking{
