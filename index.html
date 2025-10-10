@@ -17,6 +17,13 @@
             <nav class="navbar roboto">
                 <div class="n-cont">
                     <img src="components/assets/logos/logo-white.png" alt="">
+
+                    <div class="menu-toggle" id="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
                     <ul class="n-link">
                         <li class="li-c"><a href="#hero">Home</a></li>
                         <li class="li-c"><a href="#roomsC">Rooms</a></li>
@@ -26,6 +33,15 @@
                     </ul>
                 </div>
             </nav>
+            <script>
+                const toggle = document.getElementById('menu-toggle');
+                const navLinks = document.getElementById('nav-links');
+
+                toggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    toggle.classList.toggle('open');
+                });
+            </script>
         </header>
         <section id="hero">
             <div class="h-cont">
@@ -160,6 +176,32 @@
                 </div>
             </div>
         </section>
+
+        <section id="foodGallery">
+            <h2>Explore Our Food</h2>
+            <p>Poner descripción aquí.</p>
+            <div class="round"></div>
+            <div class="carousel">
+      
+                <button class="btn prev">❮</button>
+                
+                <div class="carousel-track">
+                    <img src="/" alt="1" class="carousel-item">
+                    <img src="https://picsum.photos/id/1012/800/600" alt="2" class="carousel-item">
+                    <img src="https://picsum.photos/id/1013/800/600" alt="3" class="carousel-item">
+                    <img src="https://picsum.photos/id/1014/800/600" alt="4" class="carousel-item">
+                    <img src="https://picsum.photos/id/1015/800/600" alt="5" class="carousel-item">
+                    <img src="https://picsum.photos/id/1016/800/600" alt="6" class="carousel-item">
+                    <img src="https://picsum.photos/id/1018/800/600" alt="7" class="carousel-item">
+                </div>
+
+                <button class="btn next">❯</button>
+
+                <div class="carousel-dots"></div>
+            </div>
+        </section>
+        
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
