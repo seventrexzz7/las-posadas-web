@@ -11,19 +11,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const dotsContainer = document.querySelector('.carousel-dots');
 
     let currentIndex = 2;
-    const spacing = 300;
+    const spacing = 210;
     let startX = 0;
     let isDragging = false;
 
     items.forEach((_, index) => {
-    const dot = document.createElement('span');
-    dot.classList.add('dot');
-    dot.addEventListener('click', () => {
-        currentIndex = index;
-        updateCarousel();
-        updateDots();
-    });
-    dotsContainer.appendChild(dot);
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel();
+            updateDots();
+        });
+        dotsContainer.appendChild(dot);
     });
 
     function updateDots() {
