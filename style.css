@@ -177,6 +177,7 @@ html{
 
 .line-cont{
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-top: 40px;
@@ -184,9 +185,9 @@ html{
 }
 
 .line-cont .line{
-    width: 100%;
+    flex: 1;
     margin-top: 20px;
-    max-width: 300px;
+    max-width: none;
     border-top: solid 2px;
     border-color: #fff;
 }
@@ -680,4 +681,88 @@ input[type="date"] {
 .t-cont img{
     height: 80px;
     border-radius: 50% ;
+}
+
+.f-cont{
+    background-color: #773512;
+    border-radius: 80px 80px 0px 0;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    margin: 0 auto;
+}
+
+.f-c1{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    margin-top: 3%;
+}
+
+.s-link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.s-link h3{
+    margin-bottom: 20px;
+}
+
+.site{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.site h3{
+    margin-bottom: 20px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact h3{
+    margin-bottom: 20px;
+}
+
+.socials img{
+    height: 40px;
+}
+
+.l-c{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.l-c .ln{
+    flex: 1;
+    border-radius: 5px;
+    height: 2px;
+
+    margin-top: 20px;
+    margin: auto;
+
+    background-color: #fff;
+    max-width: 300px;
+}
+
+.l-c img{
+    margin-top: 20px;
+    height: 40px;
 }
